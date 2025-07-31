@@ -1,0 +1,22 @@
+@if (pokemon) {
+  <div class="pokemon-card">
+    <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name" class="pokemon-img" />
+
+    <h2 class="pokemon-name">{{ pokemon.name }}</h2>
+
+    <ul class="pokemon-info">
+      <li><strong>Taille :</strong> {{ pokemon.height / 10 }} m</li>
+      <li><strong>Poids :</strong> {{ pokemon.weight / 10 }} kg</li>
+      <li>
+        <strong>Type :</strong>
+        @for (t of pokemon.types; track t; let last = $last) {
+          {{ t.type.name }}
+        }
+      </li>
+      <li>
+        <strong>Attaque principale :</strong>
+        {{ pokemon.moves[0].move.name}}
+      </li>
+    </ul>
+  </div>
+}

@@ -1,0 +1,6 @@
+<div class="pokedex-content">
+    <app-searchbar/>
+    <app-poke-list [pokedex]="pokedex" (showEvent)="handleData($event)"/>
+    <app-details [receiveData]="receiveData"/>
+</div>
+

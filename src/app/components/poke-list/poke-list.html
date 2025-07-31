@@ -1,0 +1,9 @@
+<div class="header">Liste</div>
+
+<div class="pokemon-container">
+  @for (p of pokedex; let i= $index; track p) {
+    <button class="pokemon-item" (click)="detailPokemon(i)">
+      {{ p.name }}
+    </button>
+  }
+</div>

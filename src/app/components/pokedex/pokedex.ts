@@ -15,6 +15,7 @@ constructor(private pokeservice: PokeService ){}
 pokemon!: any;
 pokedex!: any[]
 receiveData:number = 1;
+// receiveDataFromSearch:number =1;
   ngOnInit():void{
     this.pokeservice.getAll().subscribe({
       next:pokeData=>{
@@ -27,6 +28,7 @@ receiveData:number = 1;
   }
 
  handleData(data:number):void{this.receiveData = data}
+//  handleDataSearch(data:number):void{this.receiveDataFromSearch = data}
   
 
 ngOnDestroy(): void {}

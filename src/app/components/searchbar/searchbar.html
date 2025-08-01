@@ -1,5 +1,8 @@
 <div class="search">
-<p>prochainement ici search</p>
-    
-</div>
 
+    <form>
+  <input type="number" [formControl]="search_control" name="id"placeholder="id">
+  <button type="submit" (click)="searchMons($event)">Search</button>
+</form>
+
+</div>

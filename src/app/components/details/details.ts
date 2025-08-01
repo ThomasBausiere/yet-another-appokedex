@@ -1,12 +1,13 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { PokeService } from '../../utils/services/poke-service';
 import { PokemonDetails } from '../../utils/types/pokemon.type';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-details',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './details.html',
-  styleUrl: './details.css',
+  styleUrls: ['./details.css'],
   standalone:true
 })
 export class Details implements OnChanges {

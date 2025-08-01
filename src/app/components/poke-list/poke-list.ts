@@ -4,7 +4,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   selector: 'app-poke-list',
   imports: [],
   templateUrl: './poke-list.html',
-  styleUrl: './poke-list.css',
+  styleUrls: ['./poke-list.css'],
+  standalone:true
 })
 export class PokeList {
   @Input() pokedex!: any[];

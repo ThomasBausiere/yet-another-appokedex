@@ -1,5 +1,5 @@
 <div class="pokedex-content">
-    <app-searchbar/>
+    <app-searchbar (search)="handleData($event)"/>
     <app-poke-list [pokedex]="pokedex" (showEvent)="handleData($event)"/>
     <app-details [receiveData]="receiveData"/>
 </div>
